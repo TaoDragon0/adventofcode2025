@@ -1,0 +1,92 @@
+sol2.cpp:34:8: error: no matching function for call to 'begin'
+   34 |   copy(begin(when_the), end(when_the), new_when_the);
+      |        ^~~~~
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/initializer_list:90:5: note: candidate template ignored: could not match 'initializer_list<_Tp>' against 'int (*)[columns + 2]'
+   90 |     begin(initializer_list<_Tp> __ils) noexcept
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/bits/range_access.h:54:5: note: candidate template ignored: substitution failure: variably modified type 'int[rows + 2][columns + 2]' cannot be used as a template argument
+   54 |     begin(_Container& __cont) noexcept(noexcept(__cont.begin()))
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/bits/range_access.h:66:5: note: candidate template ignored: substitution failure: variably modified type 'int[rows + 2][columns + 2]' cannot be used as a template argument
+   66 |     begin(const _Container& __cont) noexcept(noexcept(__cont.begin()))
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/bits/range_access.h:101:5: note: candidate template ignored: could not match '_Tp[_Nm]' against 'int[rows + 2][columns + 2]'
+  101 |     begin(_Tp (&__arr)[_Nm]) noexcept
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/valarray:1229:5: note: candidate template ignored: could not match 'valarray<_Tp>' against 'int[rows + 2][columns + 2]'
+ 1229 |     begin(valarray<_Tp>& __va) noexcept
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/valarray:1240:5: note: candidate template ignored: could not match 'valarray<_Tp>' against 'int[rows + 2][columns + 2]'
+ 1240 |     begin(const valarray<_Tp>& __va) noexcept
+      |     ^
+sol2.cpp:34:25: error: no matching function for call to 'end'
+   34 |   copy(begin(when_the), end(when_the), new_when_the);
+      |                         ^~~
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/initializer_list:101:5: note: candidate template ignored: could not match 'initializer_list<_Tp>' against 'int (*)[columns + 2]'
+  101 |     end(initializer_list<_Tp> __ils) noexcept
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/bits/range_access.h:78:5: note: candidate template ignored: substitution failure: variably modified type 'int[rows + 2][columns + 2]' cannot be used as a template argument
+   78 |     end(_Container& __cont) noexcept(noexcept(__cont.end()))
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/bits/range_access.h:90:5: note: candidate template ignored: substitution failure: variably modified type 'int[rows + 2][columns + 2]' cannot be used as a template argument
+   90 |     end(const _Container& __cont) noexcept(noexcept(__cont.end()))
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/bits/range_access.h:112:5: note: candidate template ignored: could not match '_Tp[_Nm]' against 'int[rows + 2][columns + 2]'
+  112 |     end(_Tp (&__arr)[_Nm]) noexcept
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/valarray:1251:5: note: candidate template ignored: could not match 'valarray<_Tp>' against 'int[rows + 2][columns + 2]'
+ 1251 |     end(valarray<_Tp>& __va) noexcept
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/valarray:1267:5: note: candidate template ignored: could not match 'valarray<_Tp>' against 'int[rows + 2][columns + 2]'
+ 1267 |     end(const valarray<_Tp>& __va) noexcept
+      |     ^
+sol2.cpp:49:43: warning: equality comparison result unused [-Wunused-comparison]
+   49 |             new_when_the[row+1][column+1] == 0;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+sol2.cpp:49:43: note: use '=' to turn this equality comparison into an assignment
+   49 |             new_when_the[row+1][column+1] == 0;
+      |                                           ^~
+      |                                           =
+sol2.cpp:54:10: error: no matching function for call to 'begin'
+   54 |     copy(begin(new_when_the), end(new_when_the), when_the);
+      |          ^~~~~
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/initializer_list:90:5: note: candidate template ignored: could not match 'initializer_list<_Tp>' against 'int (*)[columns + 2]'
+   90 |     begin(initializer_list<_Tp> __ils) noexcept
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/bits/range_access.h:54:5: note: candidate template ignored: substitution failure: variably modified type 'int[rows + 2][columns + 2]' cannot be used as a template argument
+   54 |     begin(_Container& __cont) noexcept(noexcept(__cont.begin()))
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/bits/range_access.h:66:5: note: candidate template ignored: substitution failure: variably modified type 'int[rows + 2][columns + 2]' cannot be used as a template argument
+   66 |     begin(const _Container& __cont) noexcept(noexcept(__cont.begin()))
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/bits/range_access.h:101:5: note: candidate template ignored: could not match '_Tp[_Nm]' against 'int[rows + 2][columns + 2]'
+  101 |     begin(_Tp (&__arr)[_Nm]) noexcept
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/valarray:1229:5: note: candidate template ignored: could not match 'valarray<_Tp>' against 'int[rows + 2][columns + 2]'
+ 1229 |     begin(valarray<_Tp>& __va) noexcept
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/valarray:1240:5: note: candidate template ignored: could not match 'valarray<_Tp>' against 'int[rows + 2][columns + 2]'
+ 1240 |     begin(const valarray<_Tp>& __va) noexcept
+      |     ^
+sol2.cpp:54:31: error: no matching function for call to 'end'
+   54 |     copy(begin(new_when_the), end(new_when_the), when_the);
+      |                               ^~~
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/initializer_list:101:5: note: candidate template ignored: could not match 'initializer_list<_Tp>' against 'int (*)[columns + 2]'
+  101 |     end(initializer_list<_Tp> __ils) noexcept
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/bits/range_access.h:78:5: note: candidate template ignored: substitution failure: variably modified type 'int[rows + 2][columns + 2]' cannot be used as a template argument
+   78 |     end(_Container& __cont) noexcept(noexcept(__cont.end()))
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/bits/range_access.h:90:5: note: candidate template ignored: substitution failure: variably modified type 'int[rows + 2][columns + 2]' cannot be used as a template argument
+   90 |     end(const _Container& __cont) noexcept(noexcept(__cont.end()))
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/bits/range_access.h:112:5: note: candidate template ignored: could not match '_Tp[_Nm]' against 'int[rows + 2][columns + 2]'
+  112 |     end(_Tp (&__arr)[_Nm]) noexcept
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/valarray:1251:5: note: candidate template ignored: could not match 'valarray<_Tp>' against 'int[rows + 2][columns + 2]'
+ 1251 |     end(valarray<_Tp>& __va) noexcept
+      |     ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../include/c++/15.2.1/valarray:1267:5: note: candidate template ignored: could not match 'valarray<_Tp>' against 'int[rows + 2][columns + 2]'
+ 1267 |     end(const valarray<_Tp>& __va) noexcept
+      |     ^
+1 warning and 4 errors generated.
