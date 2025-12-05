@@ -3,7 +3,7 @@ using namespace std;
 
 int main () {
   
-  ifstream file("example");
+  ifstream file("input");
 
   if (!file.is_open()) {
     cerr << "error opening file";

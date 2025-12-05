@@ -58,65 +58,19 @@ int main () {
 
   }
 
-  //cout << lowers[0] << endl;
-  //cout << uppers[0] << endl;
-  
-  cout << "cool" << endl;
-  int n2;
-  cin >> n2;
-  
-  int res = 0;
-
-  for (int i = 0; i < n2; i++) {
-    long long id;
-    cin >> id;
-    
-    int lower_index;
-    {
-      int min_index = 0;
-      int max_index = lowers.size();
-      while (max_index - min_index > 1) {
-        int new_index = (min_index + max_index) / 2;
-        if (lowers[new_index] > id) {
-          max_index = new_index;
-        } else {
-          min_index = new_index;
-        }
-      }
-      if (lowers[min_index] > id) {
-        lower_index = min_index;
-      } else {
-        lower_index = max_index;
-      }
+  long long res = 0;
+  int lower_index = 1;
+  int upper_index = 0;
+  long long low_bound = lowers[0];
+  while (lower_index < lowers.size()) {
+    if (uppers[upper_index] < lowers[lower_index]) {
+      res += uppers[upper_index] - low_bound + 1;
+      low_bound = lowers[lower_index];
     }
-
-    int upper_index;
-    {
-      int min_index = 0;
-      int max_index = uppers.size();
-      while (max_index - min_index > 1) {
-        int new_index = (min_index + max_index) / 2;
-        if (uppers[new_index] < id) {
-          min_index = new_index;
-        } else {
-          max_index = new_index;
-        }
-      }
-      if (uppers[min_index] < id) {
-        upper_index = max_index;
-      } else {
-        upper_index = min_index;
-      }
-    }
-
-    if (upper_index < lower_index) {
-      cout << id << " is fresh: " << upper_index << "less than" << lower_index << endl;
-      res++;
-    } else {
-      cout << id << " is spoiled: " << upper_index << " not less than " << lower_index << endl;
-    }
-
+    lower_index++;
+    upper_index++;
   }
+  res += uppers[upper_index] - low_bound + 1;
 
   cout << endl << res << endl;
 
